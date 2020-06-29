@@ -1,0 +1,29 @@
+{
+  "name": "my-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node -r esm app.js",
+    "lint": "eslint app.js routes"
+  },
+  "dependencies": {
+    "atlassian-connect-express": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "errorhandler": "^1.5.1",
+    "esm": "^3.2.22",
+    "express": "^4.16.4",
+    "express-hbs": "^2.3.0",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1",
+    "nocache": "^2.1.0",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "longjohn": "^0.2.12",
+    "ngrok": "^3.2.7",
+    "sqlite3": "^4.1.1"
+  }
+}
