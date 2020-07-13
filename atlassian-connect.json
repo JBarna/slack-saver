@@ -2,7 +2,7 @@
     "key": "my-app",
     "name": "My app",
     "description": "My very first app",
-    "baseUrl": "https://slack-saver.herokuapp.com",
+    "baseUrl": "{{localBaseUrl}}",
     "authentication": {
         "type": "jwt"
     },
@@ -10,7 +10,7 @@
         "installed": "/installed"
     },
     "scopes": [
-        "READ", "WRITE"
+        "READ", "WRITE", "ACT_AS_USER"
     ],
     "modules": {
         "generalPages": [

@@ -14,6 +14,12 @@ import morgan from 'morgan';
 // atlassian-connect-express also provides a middleware
 import ace from 'atlassian-connect-express';
 
+// slack stuff
+import slack from './routes/slack-events'
+
+// confluence rest apis
+import confluence from './routes/confluence'
+
 // Use Handlebars as view engine:
 // https://npmjs.org/package/express-hbs
 // http://handlebarsjs.com
@@ -46,6 +52,16 @@ app.set('views', viewsDir);
 // Log requests, using an appropriate formatter by env
 const devEnv = app.get('env') == 'development';
 app.use(morgan(devEnv ? 'dev' : 'combined'));
+
+
+// initiate slack handlers
+slack(app)
+
+// initiate confluence stuff
+confluence.init(addon)
+addon.on('host_settings_saved', function() {
+  console.log('host callback', arguments)
+});
 
 // Atlassian security policy requirements
 // http://go.atlassian.com/security-requirements-for-cloud-apps
