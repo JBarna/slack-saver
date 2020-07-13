@@ -37,3 +37,10 @@ SDK's are amazing. The ACE library does a lot of heavy lifting for you. Same wit
 
 ## What's next for Slack Saver
 We would love to build this for Microsoft Teams and other workspace chat tools because we are sure the same issues exist with valuable messages being lost. We don't use those platforms but if people would be willing to pay a small subscription fee, we'd be willing to make it.
+
+
+# How to run it
+1. Download the source code
+2. Create a Slack App for your organization
+3. Add 1) your confluence client-key to the config file under `clientKey`, 2) your slack API key under `slackApiKey` and 3) add your slack signing secret under `slackSigningSecret` to the `config.json` file, along with your regular host information. 
+
