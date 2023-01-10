@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@slack/interactive-messages": "^1.6.0",
-    "@slack/oauth": "^1.1.0",
+    "@slack/oauth": "^2.6.0",
     "@slack/web-api": "^5.10.0",
     "atlassian-connect-express": "^4.0.1",
     "body-parser": "^1.19.0",
